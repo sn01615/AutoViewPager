@@ -3,7 +3,7 @@
 
 **beta1版本**
 
----
+
 这是一个非常简单的ViewPager，我只是简单了实现了轮播，通过Handler实现的，比较小low，但是很实用
 
 使用的方法很简单，把里面的AutoViewPager拿过去就好了
@@ -23,13 +23,14 @@
 ### java
 
 ```java
-		mAutoViewPager = (AutoViewPager) findViewById(R.id.mAutoViewPager);
+mAutoViewPager = (AutoViewPager) findViewById(R.id.mAutoViewPager);
         //设置轮播开关
         mAutoViewPager.setStartAuto(true);
         //设置轮播间隔时长 默认3s
         mAutoViewPager.setAutoTime(2000);
         for (int i = 0; i < 3; i++) {
             View view = new View(this);
+            //装载View
             mAutoViewPager.setView(view);
         }
 ```
@@ -40,7 +41,7 @@
 
 ## 二.预览
 
-![]()
+![preview](https://github.com/LiuGuiLinAndroid/AutoViewPager/blob/master/img/preview.gif)
 
 ## 三.关于
 
