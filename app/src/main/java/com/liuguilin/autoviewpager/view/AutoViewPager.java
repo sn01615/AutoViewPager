@@ -59,7 +59,11 @@ public class AutoViewPager extends ViewPager {
 
     public void setStartAuto(boolean startAuto) {
         isStartAuto = startAuto;
-        mHandler.sendEmptyMessage(AUTO_WHAT);
+        if (startAuto) {
+            mHandler.sendEmptyMessage(AUTO_WHAT);
+        } else {
+            mHandler.removeMessages(AUTO_WHAT);
+        }
     }
 
     private Handler mHandler = new Handler() {
